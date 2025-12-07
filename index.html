@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Suits World | Sophistication Stitched</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-charcoal': '#1a1a1a', // Deep Charcoal
+                        'brand-slate': '#4a4a4a',    // Slate Grey
+                        'brand-gold': '#D4AF37',     // Luxury Gold
+                        'brand-light': '#f9f9f9',    // Off-white
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styles for that "Magazine" feel */
+        .hero-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+        }
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #D4AF37;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans text-brand-charcoal antialiased">
+
+    <div class="bg-brand-charcoal text-white text-xs py-2 text-center tracking-widest font-light uppercase">
+        <p>Sophistication from just $30 | Visit us at 61 Samora Machel Ave</p>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
+                <a href="product.html" class="hover:text-brand-gold transition-colors">Shop Men</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Shop Women</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Accessories</a>
+            </nav>
+
+            <div class="text-2xl md:text-3xl font-serif font-bold tracking-tighter text-center">
+                The Suits World<span class="text-brand-gold">.</span>
+            </div>
+
+            <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide items-center">
+                <a href="#style-guide" class="hover:text-brand-gold transition-colors italic font-serif">The Style Guide</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">About Us</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Cart (0)</a>
+            </nav>
+
+            <button class="md:hidden text-brand-charcoal">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="relative h-[85vh] w-full overflow-hidden">
+        <img src="images/style00.jpg" alt="Man in Grey Suit" class="absolute inset-0 w-full h-full object-cover object-top">
+        
+        <div class="hero-overlay absolute inset-0 flex flex-col justify-end items-center pb-24 text-center px-4">
+            <h1 class="text-white font-serif text-5xl md:text-7xl mb-4 leading-tight">
+                Sophistication Stitched<br/>in Every Line.
+            </h1>
+            <p class="text-gray-200 text-lg md:text-xl font-light mb-8 max-w-2xl">
+                Elevate your presence without breaking the bank. Premium scotched suits starting at <span class="text-brand-gold font-semibold">$30</span>.
+            </p>
+            <a href="#shop" class="bg-brand-gold text-black px-8 py-3 text-sm uppercase tracking-widest font-semibold hover:bg-white transition-colors duration-300">
+                Shop the Collection
+            </a>
+        </div>
+    </section>
+
+    <section class="bg-brand-light py-12 border-b border-gray-200">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-300">
+            <div class="flex flex-col items-center justify-center p-4">
+                <span class="text-brand-gold text-2xl mb-2">✦</span>
+                <h4 class="font-serif text-lg">Starts at $30</h4>
+                <p class="text-gray-500 text-sm mt-1">Unbeatable Affordability</p>
+            </div>
+            <div class="flex flex-col items-center justify-center p-4">
+                <span class="text-brand-gold text-2xl mb-2">✂</span>
+                <h4 class="font-serif text-lg">In-Store Styling</h4>
+                <p class="text-gray-500 text-sm mt-1">Expert Fitting Advice</p>
+            </div>
+            <div class="flex flex-col items-center justify-center p-4">
+                <span class="text-brand-gold text-2xl mb-2">❖</span>
+                <h4 class="font-serif text-lg">Quality Fabric</h4>
+                <p class="text-gray-500 text-sm mt-1">Durable Scotched Blends</p>
+            </div>
+            <div class="flex flex-col items-center justify-center p-4">
+                <span class="text-brand-gold text-2xl mb-2">📍</span>
+                <h4 class="font-serif text-lg">Harare CBD</h4>
+                <p class="text-gray-500 text-sm mt-1">61 Samora Machel Ave</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 container mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-brand-gold uppercase tracking-widest text-xs font-bold">Curated by Experts</span>
+            <h2 class="font-serif text-4xl mt-2 text-brand-charcoal">The Editor's Picks</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-6 h-[500px]">
+                    <img src="images/style1.jpg" alt="Scotched Suit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <h3 class="font-serif text-2xl mb-2 group-hover:text-brand-gold transition-colors">The Daily Driver</h3>
+                <p class="text-gray-500 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                    Versatile scotched fabrics perfect for the office or the weekend. The pattern adds depth without shouting.
+                </p>
+                <a href="#" class="inline-block mt-4 text-xs uppercase tracking-widest border-b border-black pb-1">Shop This Look</a>
+            </div>
+
+            <div class="group cursor-pointer mt-0 md:-mt-12"> <div class="overflow-hidden mb-6 h-[500px]">
+                    <img src="images/style0.jpg" alt="Formal Wedding Suit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <h3 class="font-serif text-2xl mb-2 group-hover:text-brand-gold transition-colors">The Groom’s Guide</h3>
+                <p class="text-gray-500 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                    Make a statement on your big day. Double-breasted options available for that timeless vintage appeal.
+                </p>
+                <a href="#" class="inline-block mt-4 text-xs uppercase tracking-widest border-b border-black pb-1">Shop Ceremonial</a>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-6 h-[500px]">
+                    <img src="images/style01.jpg" alt="Ladies Power Suit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <h3 class="font-serif text-2xl mb-2 group-hover:text-brand-gold transition-colors">For the Boss</h3>
+                <p class="text-gray-500 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                    Impeccable tailoring for the modern woman. Sharp lines that command respect in any boardroom.
+                </p>
+                <a href="#" class="inline-block mt-4 text-xs uppercase tracking-widest border-b border-black pb-1">Shop Women</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="style-guide" class="bg-brand-charcoal text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="font-serif text-4xl mb-6">How to Wear a Scotched Suit</h2>
+                <p class="text-gray-400 mb-6 leading-relaxed font-light">
+                    A scotched (or plaid) suit is a bold move, but it doesn't have to be intimidating. At The Suits World, we believe in balancing the pattern with solid neutrals. Pair your grey windowpane check with a crisp white shirt and a solid slate tie. Let the suit do the talking.
+                </p>
+                <a href="article.html" class="text-brand-gold border-b border-brand-gold pb-1 uppercase text-xs tracking-widest hover:text-white hover:border-white transition-all">Read the Full Article</a>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                <img src="images/style4.jpg" class="w-full h-64 object-cover opacity-80 hover:opacity-100 transition-opacity">
+                <img src="images/style7.jpg" class="w-full h-64 object-cover opacity-80 hover:opacity-100 transition-opacity mt-8">
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="py-24 container mx-auto px-6">
+        <h2 class="font-serif text-3xl mb-12 text-center">New Arrivals</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
+            <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                    <img src="images/style8.jpg" class="w-full h-full object-cover">
+                    <button class="absolute bottom-0 left-0 right-0 bg-brand-gold text-black py-3 text-xs uppercase font-bold translate-y-full group-hover:translate-y-0 transition-transform duration-300">Quick Add</button>
+                </div>
+                <h3 class="font-serif text-lg">Grey Windowpane Check</h3>
+                <p class="text-gray-500 text-sm">$30.00</p>
+            </div>
+            <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                    <img src="images/style6.jpg" class="w-full h-full object-cover">
+                    <button class="absolute bottom-0 left-0 right-0 bg-brand-gold text-black py-3 text-xs uppercase font-bold translate-y-full group-hover:translate-y-0 transition-transform duration-300">Quick Add</button>
+                </div>
+                <h3 class="font-serif text-lg">Charcoal Slim Fit</h3>
+                <p class="text-gray-500 text-sm">$35.00</p>
+            </div>
+            <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                    <img src="images/style9.jpg" class="w-full h-full object-cover">
+                    <button class="absolute bottom-0 left-0 right-0 bg-brand-gold text-black py-3 text-xs uppercase font-bold translate-y-full group-hover:translate-y-0 transition-transform duration-300">Quick Add</button>
+                </div>
+                <h3 class="font-serif text-lg">Double Breasted Navy</h3>
+                <p class="text-gray-500 text-sm">$40.00</p>
+            </div>
+             <div class="group">
+                <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                    <img src="images/style7.jpg" class="w-full h-full object-cover">
+                    <button class="absolute bottom-0 left-0 right-0 bg-brand-gold text-black py-3 text-xs uppercase font-bold translate-y-full group-hover:translate-y-0 transition-transform duration-300">Quick Add</button>
+                </div>
+                <h3 class="font-serif text-lg">Classic Tuxedo</h3>
+                <p class="text-gray-500 text-sm">$45.00</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-charcoal text-white pt-20 pb-10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+            
+            <div>
+                <h5 class="font-serif text-xl mb-6 text-brand-gold">The Suits World.</h5>
+                <p class="text-gray-400 text-sm leading-7">
+                    61 Samora Machel Ave,<br>
+                    Corner First Street,<br>
+                    Harare, Zimbabwe.
+                </p>
+                <p class="text-gray-400 text-sm mt-4">Open Mon - Sat: 08:00 - 17:00</p>
+            </div>
+
+            <div class="text-center">
+                <h5 class="font-serif text-xl mb-4">Join the Inner Circle</h5>
+                <p class="text-gray-400 text-xs mb-6">Style advice and exclusive offers.</p>
+                <div class="flex border-b border-gray-500 pb-2">
+                    <input type="email" placeholder="Your email address" class="bg-transparent w-full outline-none text-white placeholder-gray-500">
+                    <button class="text-brand-gold uppercase text-xs tracking-widest hover:text-white">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="md:text-right">
+                <h5 class="font-serif text-xl mb-6 text-brand-gold">Contact</h5>
+                <p class="text-gray-400 text-sm mb-2">+263 778 439 881</p>
+                <p class="text-gray-400 text-sm mb-4">sales@thesuitsworld.com</p>
+                <div class="flex md:justify-end gap-4 mt-6">
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors">IG</a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors">FB</a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors">WA</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 pt-8 text-center text-gray-600 text-xs">
+            &copy; 2025 The Suits World. All rights reserved.
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
